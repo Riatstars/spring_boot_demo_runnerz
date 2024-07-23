@@ -1,3 +1,4 @@
+
 CREATE TABLE IF NOT EXISTS Run (
     id INT NOT NULL, 
     title VARCHAR(255) NOT NULL,
@@ -5,5 +6,6 @@ CREATE TABLE IF NOT EXISTS Run (
     completed_on TIMESTAMP NOT NULL,
     miles INT NOT NULL,
     location VARCHAR(12) NOT NULL,
+    version INT,
     PRIMARY KEY (id)
 );

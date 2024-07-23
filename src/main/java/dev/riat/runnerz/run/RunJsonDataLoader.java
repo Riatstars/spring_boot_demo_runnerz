@@ -24,7 +24,7 @@ public class RunJsonDataLoader implements CommandLineRunner {
 
   @Override
   public void run(String... args) throws Exception {
-    if(runRepository.count()==3){
+    if(runRepository.count()<=3){
       try(InputStream is = getClass().getResourceAsStream("/data/runs.json")){
         log.info("Loading data from JSON file");
         Runs runs = objectMapper.readValue(is, Runs.class);
